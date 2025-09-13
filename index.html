@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JanBandhu - Civic Issue Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  
+  <nav class="navbar-menu">
+    <img src="logo.jpg" alt="" >
+    <a href="#" style="color: white; font-size: x-large; font-weight: bold; font-family: 'Times New Roman', Times, serif;">🏠 Dashboard</a>
+    <a href="#" style="color: white; font-size: x-large; font-weight: bold;font-family: 'Times New Roman', Times, serif;">📢 Complaints</a>
+    <a href="#" style="color: white; font-size: x-large;font-weight: bold;font-family: 'Times New Roman', Times, serif;">🏛 Authorities</a>
+    <a href="#" style="color: white; font-size: x-large;font-weight: bold; font-family: 'Times New Roman', Times, serif;">📍 Map</a>
+    <a href="#" style="color: white; font-size: x-large;font-weight: bold;font-family: 'Times New Roman', Times, serif;">ℹ About</a>
+    </nav>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <header class="header">
+      <h1 style="color:#d85d1a; font-size: x-large; font-weight: bold;font-family: 'Times New Roman', Times, serif; align-items: center; justify-content: center; text-align: center;">Crowdsourced Civic Issue Reporting & Resolution System</h1>
+    </header>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat-card ongoing">
+        <h3 style="font-size: x-large; font-weight: bold; font-family: 'Times New Roman', Times, serif;">Ongoing Complaints</h3>
+        <p id="ongoing-count">0</p>
+      </div>
+      <div class="stat-card resolved">
+        <h3 style="font-size: x-large; font-weight: bold;font-family: 'Times New Roman', Times, serif;">Resolved Complaints</h3>
+        <p id="resolved-count">0</p>
+      </div>
+    </section>
+
+    <!-- FILTERS -->
+    <section class="filters">
+      <select id="city-filter">
+        <option value="">All Cities</option>
+        <option>Bhopal</option>
+        <option>Indore</option>
+        <option>Gwalior</option>
+        <option>Shivpuri</option>
+        <option>Jabalpur</option>
+      </select>
+
+      <select id="authority-filter">
+        <option value="">All Authorities</option>
+        <option>Municipal Corporation</option>
+        <option>Water Dept</option>
+        <option>Electricity Dept</option>
+        <option>Police</option>
+        <option>Environment Dept</option>
+      </select>
+    </section>
+
+    <!-- COMPLAINTS LIST -->
+    <section class="news" id="news-feed">
+      <!-- Complaints will be loaded dynamically from script.js -->
+    </section>
+
+    <!-- MAP -->
+    <section class="map-section">
+      <h3>Nearby Complaints Map</h3>
+      <div id="map"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      © 2025 JanBandhu Certified Dashboard | Powered by People’s Voices
+    </footer>
+  </main>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
