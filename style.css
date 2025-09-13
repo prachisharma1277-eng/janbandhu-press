@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    background: #f8f9fa;
+  }
+  
+  /* Sidebar */
+  .navbar-menu {
+    width: 100%;
+    height: 70px;
+    background: #d85d1a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: fixed;   /* stick to top */
+    top: 0;
+    left: 0;
+     z-index: 1000;
+     justify-content: space-evenly;
+    
+  }
+  img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 40px;
+    margin-right: 15px;
+  }
+  .navbar-header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35%;
+    height: 50px;
+    margin-right: 15px;
+  }
+   a
+  {
+    text-decoration: none;
+  }
+  p{
+    color: white;
+  }
+  .navbar h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .navbar-nav {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-nav a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  .navbar-nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Main */
+  .main-content {
+    margin: 5%;
+    padding: 0.5%;
+    flex: 1;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+  .header h1 {
+    font-size: 20px;
+    color: #333;
+  }
+  
+  /* Stats */
+  .stats {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  .stat-card {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .stat-card.ongoing h3 { color: #dc2626; }
+  .stat-card.resolved h3 { color: #16a34a; }
+  
+  /* Filters */
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+  }
+  .filters select {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Complaints */
+  .complaint-card {
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  .complaint-card h3 {
+    margin: 0 0 5px;
+  }
+  .status.ongoing { color: #dc2626; font-weight: bold; }
+  .status.resolved { color: #16a34a; font-weight: bold; }
+  
+  /* Map */
+  .map-section {
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+  }
+  #map {
+    height: 300px;
+    border-radius: 10px;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 14px;
+    background: #f1f5f9;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Responsive */
+  @media(max-width: 768px) {
+    .navbar {
+      width: 100px;
+    }
+    .navbar h2 {
+      display: none;
+    }
+    .navbar-logo {
+      width: 50px;
+    }
+    .main-content {
+      margin-left: 100px;
+    }
+    .filters {
+      flex-direction: column;
+    }
+    .stats {
+      flex-direction: column;
+    }
+  }
+  
